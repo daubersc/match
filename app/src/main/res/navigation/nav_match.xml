@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This represents the graph for navigation in the Match application. Match is designed as a single
+Activity that contains this nav host. So navigation is between the fragments listed here.
+The fragments also include the navigation actions.
+
+@version 1.0
+@since 2021-02-01
+@author Kai Dauberschmidt
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_match"
+    app:startDestination="@id/mainFragment">
+
+    <!-- main fragment and entry point -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.barcoded.match.controller.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <!-- navigation actions for this fragment -->
+        <action
+            android:id="@+id/navigateToSettings"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/navigateToAbout"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+
+    <!-- settings fragment -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.barcoded.match.controller.activities.SettingsActivity$SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/activity_settings">
+        <!-- navigation action for this fragment -->
+        <action
+            android:id="@+id/navigateSettingsToMain"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <!-- about fragment -->
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.barcoded.match.controller.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about">
+        <!-- navigation action for this fragment -->
+        <action
+            android:id="@+id/navigateAboutToMain"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

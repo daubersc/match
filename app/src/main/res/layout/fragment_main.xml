@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   This is the layout graph for the intro screen. The user can navigate to 3 different fragments
+   via the respective buttons:
+   - New Game takes the user to a new game board.
+   - Settings describe the game board's settings. They will only become active after a new game is
+   started, so e.g. the user cannot change the difficulty or game mode for the current game.
+   - About navigates the user to additional information pages, like why this game is built,
+   legal notice and possibly more.
+
+   The view is built in a responsive fashion, that means there are several Guidelines (at the
+   bottom of the @id/main_grid) that all view elements must adhere to. This allows the expanding
+   to different devices while keeping the layout somewhat consistent.
+
+   @version 1.0
+   @since 2021-02-01
+   @author Kai Dauberschmidt
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_grid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.activities.MainActivity">
+
+    <!-- Logo (and caption) -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/h25"
+        app:layout_constraintEnd_toStartOf="@+id/v90"
+        app:layout_constraintStart_toStartOf="@+id/v10"
+        app:layout_constraintTop_toTopOf="@+id/h05" />
+
+    <!-- new game button: navigate to game board -->
+    <Button
+        android:id="@+id/btn_newGame"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/match_btn"
+        android:text="@string/new_btn"
+        app:layout_constraintEnd_toEndOf="@id/v50"
+        app:layout_constraintStart_toStartOf="@id/v33"
+        app:layout_constraintTop_toTopOf="@id/h25"
+        app:layout_constraintBottom_toBottomOf="@id/hi25" />
+
+    <!-- settings button: navigate to settings fragment -->
+    <Button
+        android:id="@+id/btn_settings"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/match_btn"
+        android:text="@string/settings_btn"
+        app:layout_constraintEnd_toEndOf="@id/v50"
+        app:layout_constraintStart_toStartOf="@id/v33"
+        app:layout_constraintBottom_toBottomOf="@id/hi50"
+        app:layout_constraintTop_toTopOf="@id/hi25" />
+
+
+    <!-- about button: navigate to information fragment -->
+    <Button
+        android:id="@+id/btn_about"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/match_btn"
+        android:text="@string/abt_btn"
+        app:layout_constraintEnd_toEndOf="@id/v50"
+        app:layout_constraintStart_toStartOf="@id/v33"
+        app:layout_constraintTop_toTopOf="@id/hi50"
+        app:layout_constraintBottom_toBottomOf="@id/hi75" />
+
+    <!-- responsive design guidelines -->
+    <!--
+        The guidelines follow this scheme:
+        - @+id/xy - where x represents the orientation and y represents the percentage.
+        - @+id/hy - represents horizontal guidelines
+        - @+id/hiy - represents inner horizontal guidelines: The section between logo and bottom
+        is split percentage based.
+        - @id/vy - represents vertical guidelines
+
+    -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hi25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hi50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hi75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
+    <!-- end responsive design guidelines -->
+</androidx.constraintlayout.widget.ConstraintLayout>

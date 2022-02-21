@@ -1,0 +1,175 @@
+<!--
+    This is the layout graph for the game information. The user can see additional information
+    about the purpose of this application as well as the legal notice
+
+    The view is built in a responsive fashion, that means there are several Guidelines (at the
+    bottom of the @id/settings_grid) that all view elements must adhere to. This allows the
+    expansion to different devices while keeping the layout somewhat consistent.
+
+    @version 1.0
+    @since 2021-02-02
+    @author Kai Dauberschmidt
+ -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_grid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@android:style/Theme.NoTitleBar.Fullscreen"
+    tools:context=".controller.activities.MainActivity">
+
+    <!-- back button: Navigate to the Main Fragment on click -->
+    <ImageButton
+        android:id="@+id/btn_aboutToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:contentDescription="@string/btn_back"
+        android:src="@drawable/ic_back"
+        android:onClick="closeActivity"
+        app:layout_constraintBottom_toBottomOf="@id/settings_cpt"
+        app:layout_constraintEnd_toStartOf="@id/settings_cpt"
+        app:layout_constraintStart_toStartOf="@+id/v10"
+        app:layout_constraintTop_toTopOf="@id/settings_cpt"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <!-- Fragment Caption -->
+    <TextView
+        android:id="@+id/settings_cpt"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pref_cpt"
+        app:layout_constraintBottom_toBottomOf="@id/h25"
+        app:layout_constraintEnd_toEndOf="@id/v90"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintTop_toTopOf="@id/h05"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <FrameLayout
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/v90"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintTop_toTopOf="@id/h25"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+    <!-- logo at the bottom of the page -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/h95"
+        app:layout_constraintEnd_toEndOf="@id/v90"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintTop_toTopOf="@id/h85" />
+
+
+    <!-- percentage based guidelines for responsive design -->
+    <!-- vertical limits -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".38"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".58"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".9"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <!-- horizontal limits -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".95"
+        tools:layout_conversion_absoluteHeight="0dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<resources>
+    <!-- global resources -->
+    <string name="btn_back">back</string>
+    <string name="app_name" translatable="false">Match</string>
+
+    <!-- starting screen -->
+    <string name="new_btn">New Game</string>
+    <string name="settings_btn">Settings</string>
+    <string name="abt_btn">About</string>
+    <!-- end starting screen -->
+
+    <!-- preferences -->
+    <!-- cpt -->
+    <string name="pref_cpt">Settings</string>
+    <!-- difficulty setting -->
+    <string name="pref_difficulty_cpt">Difficulty</string>
+    <string name="pref_difficulty_summary">
+        The difficulty determines how many rows and sticks are present in a game.
+    </string>
+
+    <!-- opener -->
+    <string name="pref_opener_cpt">Player starts</string>
+    <string name="pref_opener_summary">If toggled, you are going to make the first move.</string>
+
+    <!-- mode -->
+    <string name="pref_mode_cpt">Misere mode</string>
+    <string name="pref_mode_summary">In Misere the player who takes the last match loses.</string>
+
+    <!-- verbose -->
+    <string name="pref_verbose_cpt">binary representation</string>
+    <string name="pref_verbose_summary">
+    Enables the additional binary representation for the amount of matches per row as well as
+        an additional line for the Match sum of the board. This is helpful for people who aren\'t
+        firm with binary calculations.
+    </string>
+    <string name="pref_verbose_sum">binary sum:</string>
+
+    <!-- end preferences -->
+
+    <!-- about -->
+    <string name="about_cpt">About</string>
+    <string name="about_sum_cpt">Game description</string>
+    <string name="about_summary">
+        The game is based on an ancient strategic game. Two players take turns in removing matches from a row.
+        Each player has to take at least one match from any given row but players can also take several matches per move
+        if the matches are in the same row.
+    </string>
+    <string name="about_goal_cpt">Goals</string>
+    <string name="about_goal_txt">
+        In a regular game the player who takes the last match wins the game.
+        \nIn Misere the player who takes the last match loses the game.
+    </string>
+
+    <string name="about_vd_cpt">Happy Valentine\'s Day!</string>
+    <string name="about_vd_txt">
+        My love for you is like the raging sea,
+        \nSo powerful and deep it will forever be.
+        \nThrough storm, wind, and heavy rain,
+        \nIt will withstand every pain.
+        \n
+        \nThis year I\'m going to gift you this application. Hopefully it will bring you more joy
+        than pain. You are the love of my life, Peter and I truly love you.  The computer\'s logic
+        is based on my own, so in a way you always play against me.
+    </string>
+    <string name="about_ln_cpt">Legal notice</string>
+    <string name="about_ln_txt">
+    All Rights Reserved.
+    \n\nAll material appearing in this application is protected intellectual property. You may not
+        copy, reproduce,
+        distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any
+        such content, nor may you distribute any part of this content over any network, including a local area network,
+        sell or offer it for sale, or use such content to construct any kind of database.
+    </string>
+    <string name="about_cr" translatable="false">© 2021, Kai Dauberschmidt</string>
+    <!-- end about -->
+
+    <!-- game over -->
+    <string name="gameOver_win">
+        Congratulations!
+        \n You won!
+    </string>
+    <string name="gameOver_lose">
+        Oh no!
+        \n You lost.
+    </string>
+    <!-- end gameOver -->
+
+</resources>

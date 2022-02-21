@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- global resources -->
+    <string name="btn_back">Zurück</string>
+
+    <!-- starting screen -->
+    <string name="new_btn">Neues Spiel</string>
+    <string name="settings_btn">Einstellungen</string>
+    <string name="abt_btn">Über</string>
+    <!-- end starting screen -->
+
+    <!-- preferences -->
+    <!-- cpt -->
+    <string name="pref_cpt">Einstellungen</string>
+    <!-- difficulty setting -->
+    <string name="pref_difficulty_cpt">Schwierigkeit</string>
+    <string-array name="pref_difficulty_entries">
+        <item>Schwer</item>
+        <item>Normal</item>
+        <item>Einfach</item>
+    </string-array>
+    <string name="pref_difficulty_summary">
+         Die Schwierigkeit bestimmt die Anzahl der Reihen und Streichhölzer.
+    </string>
+
+    <!-- opener -->
+    <string name="pref_opener_cpt">Spieler beginnt</string>
+    <string name="pref_opener_summary">Falls aktiv, darfst du das Spiel beginnen.</string>
+
+    <!-- mode -->
+    <string name="pref_mode_cpt">Misere Modus</string>
+    <string name="pref_mode_summary"> In Misere verliert der Spieler, der das letzte Streichholz nimmt.</string>
+
+    <!-- verbose -->
+    <string name="pref_verbose_cpt">Binäre Darstellung</string>
+    <string name="pref_verbose_summary">
+        Schaltet die zusätzliche Binärdarstellung für die Anzahl der Streichhölzer pro Reihe, sowie
+        eine zusätzliche Zeile für die Match Summe frei. Das ist als Hilfe für Personen gedacht, die
+        nicht fit in binären Berechnungen sind.
+    </string>
+    <string name="pref_verbose_sum">Binäre Summe:</string>
+    <!-- end preferences -->
+
+    <!-- about -->
+    <!-- about -->
+    <string name="about_cpt">Über</string>
+    <string name="about_sum_cpt">Beschreibung</string>
+    <string name="about_summary">
+                Das Spiel basiert auf einem antiken Strategiespiel. Zwei Spieler entfernen abwechselnd Streichhölzer aus einer
+        Reihe. Die Spieler müssen mindestens ein Streichholz pro Zug entfernen. Sie können aber auch mehrere wählen,
+        sofern sich die Streichhölzer in derselben Reihe befinden.
+    </string>
+    <string name="about_goal_cpt">Ziele</string>
+    <string name="about_goal_txt">
+        Bei einem normalen Spiel gewinnt der Spieler, der das letzte Streichholz nimmt.
+        Bei der Misere verliert der Spieler, der das letzte Streichholz nimmt.
+    </string>
+    <string name="about_vd_cpt">Alles Liebe zum Valentinstag!</string>
+    <string name="about_vd_txt">
+        Ich lieb nur dich mein teures Herz,
+        \nDie Liebe ist wie raue See,
+        \nsie trotzt tosend Wind, Sturm und Schnee,
+        \nÜberwindet gar jeden Schmerz.
+        \n\nIch schenke dir dieses Jahr diese App. Hoffentlich bringt sie dir mehr Freude als Schmerz.
+        Du bist die Liebe meines Lebens, Peter, und ich liebe dich von ganzem Herzen. Die Logik des
+        Computers basiert auf meiner eigenen, so spielst du quasi immer und überall gegen mich.
+    </string>
+    <string name="about_ln_cpt">Rechtliche Hinweise</string>
+    <string name="about_ln_txt">
+     Alle Rechte vorbehalten. <br />
+        Bei diesem Spiel handelt es sich um geschütztes geistiges Eigentum. Es darf ohne Zustimmung des Urhebers weder
+        Ganzen noch in Teilen kopiert, vervielfältigt, verteilt, veröffentlicht, gezeigt, verkauft, ausgeführt oder
+        modifiziert werden. Ferner darf ohne Zustimmung des Autors das Eigentum oder Teile nicht in andere Werke
+        abgeleitet, übertragen oder ausgenutzt werden. Dazu zählt insbesondere eine Übertragung über irgendein Netzwerk,
+        inklusive lokaler Netzwerke, oder aus den Daten der Anwendung einen Datensatz in Form einer Datenbank zu bauen.
+    </string>
+    <!-- end about -->
+
+    <!-- game over -->
+    <string name="gameOver_win">
+        Glückwunsch!
+        \nDu hast gewonnen!
+    </string>
+    <!-- end gameOver -->
+    <!-- game over -->
+    <string name="gameOver_lose">
+       Oh nein!
+        \nDu hast verloren.
+    </string>
+    <!-- end gameOver -->
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   This is the layout graph for the game information. The user can see additional information
+   about the purpose of this application as well as the legal notice
+
+   The view is built in a responsive fashion, that means there are several Guidelines (at the
+   bottom of the @id/settings_grid) that all view elements must adhere to. This allows the
+   expansion to different devices while keeping the layout somewhat consistent.
+
+   @version 1.0
+   @since 2021-02-02
+   @author Kai Dauberschmidt
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/about_grid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.activities.MainActivity">
+
+    <!-- back button: Navigate to the Main Fragment on click -->
+    <ImageButton
+        android:id="@+id/btn_aboutToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:background="@color/white"
+        android:onClick="closeFragment"
+        app:layout_constraintStart_toStartOf="@+id/v10"
+        app:layout_constraintEnd_toStartOf="@id/settings_cpt"
+        app:layout_constraintTop_toTopOf="@id/settings_cpt"
+        app:layout_constraintBottom_toBottomOf="@id/settings_cpt"
+        android:contentDescription="@string/btn_back"
+        tools:ignore="OnClick" />
+
+    <!-- Fragment Caption -->
+    <TextView
+        android:id="@+id/settings_cpt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/about_cpt"
+        style="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintTop_toTopOf="@id/h05"
+        app:layout_constraintBottom_toBottomOf="@id/h25"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toEndOf="@id/v90" />
+
+    <ScrollView
+        android:id="@+id/about_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/h25"
+        app:layout_constraintBottom_toTopOf="@id/h85"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toEndOf="@id/v90">
+
+        <GridLayout
+            android:id="@+id/about_iGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1">
+
+            <!-- Game Description -->
+            <TextView
+                android:id="@+id/about_summary_cpt"
+                android:text="@string/about_sum_cpt"
+                style="@style/TextAppearance.AppCompat.Title" />
+              <TextView
+                android:layout_margin="15dp"
+                android:id="@+id/about_summary"
+                android:text="@string/about_summary"
+                style="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/about_goal_cpt"
+                android:text="@string/about_goal_cpt"
+                style="@style/TextAppearance.AppCompat.Subhead" />
+            <TextView
+                android:layout_margin="15dp"
+                android:id="@+id/about_goal"
+                android:text="@string/about_goal_txt"
+                style="@style/TextAppearance.AppCompat.Body1" />
+
+            <!-- legal notice -->
+            <TextView
+                android:id="@+id/about_ln_cpt"
+                android:text="@string/about_ln_cpt"
+                style="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:layout_margin="15dp"
+                android:id="@+id/about_ln_txt"
+                android:text="@string/about_ln_txt"
+                style="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/about_cr"
+                android:text="@string/about_cr"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
+        </GridLayout>
+
+    </ScrollView>
+
+
+    <!-- logo at the bottom of the page -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="@id/h85"
+        app:layout_constraintBottom_toTopOf="@id/h95"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toEndOf="@id/v90"
+        android:contentDescription="@string/app_name" />
+
+
+    <!-- percentage based guidelines for responsive design -->
+    <!-- vertical limits -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".9" />
+
+    <!-- horizontal limits -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".95" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

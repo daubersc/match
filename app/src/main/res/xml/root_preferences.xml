@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory>
+        <!-- difficulty -->
+        <ListPreference
+            android:defaultValue="df_moderate"
+            android:entries="@array/pref_difficulty_entries"
+            android:entryValues="@array/pref_difficulty_values"
+            android:key="list_difficulty"
+            android:summary="@string/pref_difficulty_summary"
+            android:title="@string/pref_difficulty_cpt" />
+
+        <!-- player opens ? -->
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="sw_player_opens"
+            android:summary="@string/pref_opener_summary"
+            android:title="@string/pref_opener_cpt" />
+
+        <!-- misere mode on ? -->
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sw_misere"
+            android:summary="@string/pref_mode_summary"
+            android:title="@string/pref_mode_cpt" />
+
+        <!-- verbose mode on ? -->
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="sw_verbose"
+            android:summary="@string/pref_verbose_summary"
+            android:title="@string/pref_verbose_cpt" />
+    </PreferenceCategory>
+</PreferenceScreen>
